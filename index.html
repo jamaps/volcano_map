@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset='utf-8' />
+    <link rel="icon" type="image/png" href="favicon.png" />
+    <title>Volcanoes & Tectonic Plates</title>
+    <meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.0/mapbox-gl.js'></script>
+    <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v0.14.0/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://fonts.googleapis.com/css?family=Titillium+Web' rel='stylesheet' type='text/css'>
+    <style>
+        body { margin:0; padding:0; min-width: 800px;}
+        #map {width:100%; height:calc(100vh - 20px);}
+        #timg {position: absolute; top: 9px; right: 45px; pointer-events: none;}
+        #line {width:100%; height: 1px; background-color: grey;}
+        #footer {width:100%; height:17px;  margin-top: -13px; text-align: center;}
+        p {font-size: 12px; font-family: 'Titillium Web', sans-serif; color: grey;}
+        a {text-decoration: none; color: black;}
+        .mapboxgl-popup {padding: 0px; font-size:12px; font-family: 'Helvetica', sans-serif; opacity: 0.97;}
+    </style>
+</head>
+
+<body>
+
+<div id='main'>
+  <div id='map'></div>
+  <div id='timg'> <img src=title.png /></div>
+</div>
+<div id='line'></div>
+<div id='footer'><p>Map designed by
+  <a href='http://jamaps.github.io'target="_blank">Jeff Allen</a> //
+  using <a href='http://www.qgis.org/en/site/'target="_blank">QGIS</a>,
+  <a href='http://www.gdal.org/ogr2ogr.html'target="_blank">ogr2ogr</a>,
+  <a href='https://www.mapbox.com/studio/'target="_blank">Mapbox Studio</a>,
+  <a href='https://www.mapbox.com/mapbox-gl-js/api/'target="_blank">Mapbox GL JS</a>
+  // data from <a href='http://www.naturalearthdata.com/'target="_blank">Natural Earth</a>,
+  <a href='https://www.ngdc.noaa.gov/'target="_blank">NOAA</a>,
+  <a href='https://github.com/fraxen/tectonicplates'target="_blank">nordpil</a>, &
+  <a href='https://www.openstreetmap.org/ 'target="_blank">OpenStreetMap</a>.
+</div>
+
+<script src='data/volcano.geojson'>//loading volcano geojson</script>
+<script src='data/plates.geojson'>//loading plates geojson</script>
+<script	src='map_code.js'>//loading map code for display</script>
+
+</body>
+
+</html>
