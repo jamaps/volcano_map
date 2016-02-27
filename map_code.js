@@ -42,10 +42,22 @@ map.on('style.load', function () {
         "layout": {
             "icon-image": "{marker-symbol}",
             "icon-padding": -16,
-            "icon-size": 0.72,
+            "icon-size": {
+                "base": 1,
+                "stops": [
+                    [8, 0.7],
+                    [16, 2]
+                    ]
+            }
         },
         "paint":{
-          "icon-opacity": 0.9,
+          "icon-opacity": {
+              "base": 1,
+              "stops": [
+                  [1, 0.85],
+                  [8, 1]
+                  ]
+          }
         }
     });
 });
