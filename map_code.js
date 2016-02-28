@@ -5,8 +5,11 @@ var map = new mapboxgl.Map({
     //style: 'mapbox://styles/mapbox/streets-v8',
     center: [138, 17],
     zoom: 1.5,
+    maxZoom: 14.01,
     attributionControl: false,
 });
+
+
 
 // add plate boundaries
 map.on('style.load', function () {
@@ -93,6 +96,7 @@ map.on('click', function (e) {
         console.log(xy)
         console.log(elev)
         console.log(e.lngLat)
+        console.log(map.getZoom())
 
         popup.setLngLat(e.lngLat)
             .setHTML(
