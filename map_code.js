@@ -4,9 +4,7 @@
 
 //
 
-
-mapboxgl.accessToken = 'mapboxgl.accessToken = 'pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6ImNqaGlnOHZkODIzb2UzOGw4MmNvaTY1cnEifQ.EzcwmMSTC_vL90m7Bd3XAg';
-';
+mapboxgl.accessToken ='pk.eyJ1IjoiamVmZmFsbGVuIiwiYSI6ImNqaGlnOHZkODIzb2UzOGw4MmNvaTY1cnEifQ.EzcwmMSTC_vL90m7Bd3XAg';
 var map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/jeffallen/cimic77ij0063qxno884ynu0h',
